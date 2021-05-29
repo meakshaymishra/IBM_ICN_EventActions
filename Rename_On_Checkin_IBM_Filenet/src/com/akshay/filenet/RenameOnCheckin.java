@@ -17,11 +17,6 @@ import java.util.Date;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
-/**
- * 
- * 
- * 
- */
 public class RenameOnCheckin implements EventActionHandler {
 	private static Logger logger = Logger.getLogger(RenameOnCheckin.class);
 
@@ -48,8 +43,6 @@ public class RenameOnCheckin implements EventActionHandler {
 
 			// Set Description as the MWCCDescription provided
 			if (doc.getClassName().equalsIgnoreCase("TestDocument")) {
-				logger.info("Document Class is TestDocument");
-
 				doc.getProperties().putValue("DocumentTitle", "Document - " + new Date());
 			}
 
